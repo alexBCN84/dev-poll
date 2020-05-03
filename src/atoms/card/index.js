@@ -19,6 +19,12 @@ const Card = styled.article`
             color: #ffffff;
         } 
     `};
+    ${props =>
+    props.detailsCard &&
+    css`
+        width: 95%;
+        margin: 30px auto;
+    `};
 `;
 
 export default Card;
