@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dev Poll
 
-## Available Scripts
+A webapp to see what are the most popular current technologies in web development, vote your favourite ones, and ask the community for their opinions.
 
-In the project directory, you can run:
+## Requirements
+- Node.js 10.15+
+- NPM 6+ / yarn
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup the project locally
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+1. Clone the project and install the node dependencies:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```
+   npm install
+   ```
+   or
+   ```
+   yarn
+   ```
+2. Run the project locally
+    ```
+   npm start
+   ```
+   or
+   ```
+   yarn start
+   ```
 
-### `yarn build`
+    ## Project highlights
+    - All the components in the project are statless functional components. I have used `react hooks` to handle application state.
+    - There are a few css styles in index.css file, but I have mostly used to `styled-components`.
+    - In some components I have used two personal npm libraries. `react-grid-lib` to help me with layout: see [react-grid-lib](https://www.npmjs.com/package/react-grid-lib)), and `react-use-device` to render different code per device: see [react-use-device](https://www.npmjs.com/package/react-use-device).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ## Project structure
+   The project is built using [create-react-app](https://github.com/facebook/create-react-app) so the folder structure follows the common pattern of a standard CRA application.
 
-### `yarn eject`
+    `▸ build/` production ready css and js files.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    `▸ src/`  application source code.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    `▸ src/components` this directory contains core components with their logic. In some cases they include style-components in the same files.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    `▸ src/atoms` pure style components that are then reused across the project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+    `▸ public/` where the `index.html` resides used by the development server.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    `▸ src/components/pages` contains the three page views of the application.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+    `▸ src/utils` api calls and helper functions used across the application.
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Build and deploy process
 
-### Making a Progressive Web App
+To deploy this app with github pages I followed these steps: 
+1. Install gh-pages package in your root directory:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+   ```
+   npm install --save gh-pages
+   ```
+   or
+   ```
+   yarn add gh-pages --save
+   ```
+2. Setup your package.json.
+    ```
+   change your hompage: "homepage": https://[your-user-name].github.io/[your-repo-name]/
+   ```
+   and add the following scripts:
+   ```
+   "predeploy": "yarn run build",
+   ```
+   "deploy": "gh-pages -d build",
+   ```
+3. Deploy the application
+   ```
+   npm run deploy
 
-### Advanced Configuration
+   ```
+   or
+   ```
+   yarn deploy
+   ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
