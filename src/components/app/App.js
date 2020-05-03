@@ -24,11 +24,15 @@ function App() {
     selectedQuestion
   }
 
+  const questionFormProps = {
+    onChangeRoute
+  }
+
   return (
     <div className="app">
       { route === QUESTIONS && <Questions {...questionsProps}/> }
       { route === QUESTION_DETAILS && <QuestionDetails {...questionDetailsProps}/> }
-      { route === QUESTION_FORM && <QuestionForm changeRoute={onChangeRoute}/> }
+      { route === QUESTION_FORM && <QuestionForm {...questionFormProps}/> }
       <footer>
         {'Powered by'}
         <a href=" http://docs.pollsapi.apiary.io/" alt="polls api">
