@@ -1,4 +1,4 @@
-const endpointRoot = 'https://polls.apiblueprint.org/';
+const endpointRoot = 'https://polls.apiblueprint.org';
 
 async function handleResponse(res) {
     const response = await res.json();
@@ -11,7 +11,7 @@ async function handleResponse(res) {
 // api call to get all the questions on load
 export async function getAllQuestions(){
     try {
-        const response = await fetch(`${endpointRoot}questions?`);
+        const response = await fetch(`${endpointRoot}/questions?`);
         return await handleResponse(response);
     }
     catch(err) {
@@ -20,7 +20,7 @@ export async function getAllQuestions(){
 }
 
 // api call to get one specific question
-export async function getQuestion(url) {
+export async function getQuestionDetails(url) {
     try {
         const response = await fetch(`${endpointRoot}${url}`);
         return await handleResponse(response);
@@ -47,7 +47,7 @@ export async function postVote(url) {
 // api call to create new question
 export async function postQuestion(questionData) {
     try {
-        const response = await fetch(`${endpointRoot}questions?`,{
+        const response = await fetch(`${endpointRoot}/questions?`,{
             headers: {
                 'Content-Type': 'application/json'
             },
