@@ -6,9 +6,9 @@ const Headline = styled.h1`
     font-size: 3.5em;
     text-align: left;
     @media (max-width: 768px) {
-    text-align: center;
-    margin: 0;
-  }
+        text-align: center;
+        margin: 0;
+    }
 `;
 
 export default Headline;
