@@ -12,8 +12,12 @@ const Card = styled.article`
     ${props =>
     props.questionOverview &&
     css`
-      height: 300px;
-      padding: 10px;
+        height: 370px;
+        transition: background-color 0.1s, color 0.1s;
+        :hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        } 
     `};
 `;
 
