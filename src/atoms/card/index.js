@@ -19,11 +19,13 @@ const Card = styled.article`
             color: #ffffff;
         } 
     `};
+
     ${props =>
-    props.detailsCard &&
+    (props.detailsCard || props.formCard) &&
     css`
         width: 95%;
         margin: 30px auto;
+        padding-top: 30px;
     `};
 `;
 
