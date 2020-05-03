@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dev-poll/static/css/main.b43fe690.chunk.css",
+    "main.js": "/dev-poll/static/js/main.230a25db.chunk.js",
+    "main.js.map": "/dev-poll/static/js/main.230a25db.chunk.js.map",
+    "runtime-main.js": "/dev-poll/static/js/runtime-main.b49b9e23.js",
+    "runtime-main.js.map": "/dev-poll/static/js/runtime-main.b49b9e23.js.map",
+    "static/js/2.9ce6cc0f.chunk.js": "/dev-poll/static/js/2.9ce6cc0f.chunk.js",
+    "static/js/2.9ce6cc0f.chunk.js.map": "/dev-poll/static/js/2.9ce6cc0f.chunk.js.map",
+    "index.html": "/dev-poll/index.html",
+    "precache-manifest.2db55cc09bf42bf13145fea50e0d4d08.js": "/dev-poll/precache-manifest.2db55cc09bf42bf13145fea50e0d4d08.js",
+    "service-worker.js": "/dev-poll/service-worker.js",
+    "static/css/main.b43fe690.chunk.css.map": "/dev-poll/static/css/main.b43fe690.chunk.css.map",
+    "static/js/2.9ce6cc0f.chunk.js.LICENSE.txt": "/dev-poll/static/js/2.9ce6cc0f.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/dev-poll/static/media/logo.27abda11.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b49b9e23.js",
+    "static/js/2.9ce6cc0f.chunk.js",
+    "static/css/main.b43fe690.chunk.css",
+    "static/js/main.230a25db.chunk.js"
+  ]
+}
