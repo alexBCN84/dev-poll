@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const Subline = styled.h2`
     font-weight: 600;
@@ -10,6 +10,13 @@ const Subline = styled.h2`
     text-align: center;
     margin: 0;
   }
+
+  ${props =>
+    props.formLabel &&
+    css`
+        font-size: 3vmin;
+        text-align: center;
+    `};
 `;
 
 export default Subline;
