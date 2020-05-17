@@ -50,7 +50,7 @@ export default function QuestionForm({onChangeRoute}) {
     const headerProps = {route: QUESTIONS, onChangeRoute};
 
     return (
-        <>
+        <div data-cy="question-form-view">
             <Header {...headerProps}/>
             <Headline>{'Ask a question'}</Headline>
             <form>
@@ -70,6 +70,6 @@ export default function QuestionForm({onChangeRoute}) {
                 </Card>
             </form>
             
-        </>
+        </div>
     )  
 }

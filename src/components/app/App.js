@@ -28,11 +28,24 @@ function App() {
     onChangeRoute
   }
 
+  function renderRoute() {
+    switch(route){
+      case QUESTIONS: 
+        return <Questions {...questionsProps}/>;
+        break;
+      case QUESTION_DETAILS:
+        return <QuestionDetails {...questionDetailsProps}/>;
+        break;
+      case QUESTION_FORM:
+        return <QuestionForm {...questionFormProps}/>;
+      default: 
+      return <Questions {...questionsProps}/>
+    }
+  }
+
   return (
     <div className="app">
-      { route === QUESTIONS && <Questions {...questionsProps}/> }
-      { route === QUESTION_DETAILS && <QuestionDetails {...questionDetailsProps}/> }
-      { route === QUESTION_FORM && <QuestionForm {...questionFormProps}/> }
+      { renderRoute() }
       <footer>
         {'Powered by'}
         <a href=" http://docs.pollsapi.apiary.io/" alt="polls api">

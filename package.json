@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "eslint-plugin-cypress": "^2.10.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -19,7 +20,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "cy:run": "cypress run --browser chrome",
+    "cy:run-prod": "CYPRESS_BASE_URL=https://alexbcn84.github.io/dev-poll/ cypress run --browser chrome",
+    "cy:run-dev": "start-server-and-test start http://localhost:3000 cy:run",
+    "cy:open": "cypress open",
+    "cy:open-dev": "start-server-and-test start http://localhost:3000 cy:open",
+    "cy:open-prod": "CYPRESS_BASE_URL=https://alexbcn84.github.io/dev-poll/ cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,7 +44,9 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^4.5.0",
     "gh-pages": "^2.2.0",
-    "react-grid-lib": "^0.2.8"
+    "react-grid-lib": "^0.2.8",
+    "start-server-and-test": "^1.11.0"
   }
 }

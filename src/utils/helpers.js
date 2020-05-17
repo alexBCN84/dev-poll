@@ -1,4 +1,12 @@
-function toOrdinal(num) {
+export function toOrdinal(num) {
+    if (num < 1 || num > 31) {
+        return console.error('input value must be in range 1-31');
+    }
+
+    if (typeof num !== 'number') {
+        return console.error('input type should be a number')
+    }
+
     num = num.toString();
     if (num === '11' || num === '12' || num === '13') {
         return num + 'th';
@@ -15,7 +23,10 @@ function toOrdinal(num) {
     return num + 'th';
 }
 
-function toMonthLetters(month) {
+export function toMonthLetters(month) {
+    if (typeof month !== 'string') {
+        return console.error('input type should be string');
+    }
     switch(month) {
         case '01':
             return 'January';
@@ -39,8 +50,10 @@ function toMonthLetters(month) {
             return 'October';
         case '11':
             return 'November';
-        default:
+        case '12':
             return 'December';
+        default:
+            return console.error('invalid input value');
     }
 }
 
