@@ -26,7 +26,7 @@ const Header = ({onChangeRoute, route}) => {
     return (
         <StyledHeader className="app-header">
             <Logo {...logoProps}/>
-            <StyledLink onClick={() => onChangeRoute(route)}>{link}</StyledLink>
+            <StyledLink data-cy="header-link" onClick={() => onChangeRoute(route)}>{link}</StyledLink>
         </StyledHeader>
     );
 }

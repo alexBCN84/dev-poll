@@ -34,7 +34,7 @@ const DetailsCard = ({choices, onChangeRoute}) => {
                         <Grid>
                             <Row>
                                 <Col width={12}>{`choice: ${choice}`}</Col>
-                                <Col width={12}>{`votes: ${votes}`}</Col>
+                                <Col width={12}><span>{`votes: ${votes}`}</span></Col>
                                 <Col width={12}>{`percent: ${percent}%`}</Col>
                                 <Col width={12}>{'vote this option '}<input type="radio" onChange={handleChoice} value={url} name="vote"/></Col>
                             </Row>
@@ -49,12 +49,12 @@ const DetailsCard = ({choices, onChangeRoute}) => {
     const desktopChoicesDisplay = (
         <Card detailsCard>
             <form>
-                <ul>{choices && choices.map(({choice, votes, percent, url}, i) => 
+                <ul data-cy="question-options">{choices && choices.map(({choice, votes, percent, url}, i) => 
                     <li key={i}>
                         <Grid>
                             <Row align="left">
                                 <Col width={5}>{choice}</Col>
-                                <Col width={4}>{`${votes} votes`}</Col>
+                                <Col width={4}><span>{`${votes} votes`}</span></Col>
                                 <Col width={2}>{`${percent}%`}</Col>
                                 <Col width={1}><input type="radio" onChange={handleChoice} value={url} name="vote"/></Col>
                             </Row>
@@ -69,7 +69,7 @@ const DetailsCard = ({choices, onChangeRoute}) => {
     return (
         <>
             {isMOBILE ? mobileChoicesDisplay : desktopChoicesDisplay}
-            <Button vote onClick={() => {
+            <Button data-cy="vote-button" vote onClick={() => {
                 postVote(selectedChoice).then(data => {
                     onChangeRoute(QUESTIONS);
                 });

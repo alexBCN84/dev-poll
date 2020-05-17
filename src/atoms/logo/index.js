@@ -29,7 +29,7 @@ const StyledLogoWrapper = styled.div`
 `;
 
 const Logo = ({onChangeRoute}) => (
-    <StyledLogoWrapper onClick={() => onChangeRoute(QUESTIONS)}>
+    <StyledLogoWrapper data-cy="logo" onClick={() => onChangeRoute(QUESTIONS)}>
         <StyledLogo src={logo} className="app-logo" alt="logo" />
         <StyledTitle>{'DEV POLL'}</StyledTitle>
     </StyledLogoWrapper>

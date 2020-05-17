@@ -30,12 +30,12 @@ export default function Questions(props) {
     const headerProps = {route: QUESTION_FORM, onChangeRoute};
     
 return (
-    <>
+    <div data-cy="questions-view">
         <Header {...headerProps}/>
         <Headline>{'Questions'}</Headline>
         <Grid fullWidth>
             <Row align="left">{questionCards}</Row>
         </Grid>
-    </>
+    </div>
     )
 }

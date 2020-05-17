@@ -55,6 +55,17 @@ A webapp to see what are the most popular current technologies in web developmen
 
     `▸ src/utils` api calls and helper functions used across the application.
 
+## Run tests
+1. Running unit tests
+
+```
+yarn test
+```
+2. Running end to end tests with cypress
+
+```
+yarn run cy:open-dev
+```
 
 ## Build and deploy process
 

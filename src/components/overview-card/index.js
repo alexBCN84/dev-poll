@@ -11,6 +11,7 @@ const OverviewCard = ({question, published_at, choices, url, setSelectedQuestion
     const { isMOBILE } = useDevice();
     const infoLabel = (
         <InfoLabel 
+            data-cy="info-label"
             onClick={
                 () => {
                     onChangeRoute(QUESTION_DETAILS);
@@ -24,6 +25,7 @@ const OverviewCard = ({question, published_at, choices, url, setSelectedQuestion
 
     return (
         <Card 
+            data-cy="overview-card"
             questionOverview 
             onMouseEnter={() => setHighlighted(true)}
             onMouseLeave={() => setHighlighted(false)}

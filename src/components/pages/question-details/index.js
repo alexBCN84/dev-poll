@@ -23,12 +23,12 @@ export default function QuestionDetails({onChangeRoute, selectedQuestion}) {
     const headerProps = {route: QUESTION_FORM, onChangeRoute};
     
     return (
-        <>
+        <div data-cy="question-details-view">
             <Header {...headerProps}/>
             <Headline>{'Question Details'}</Headline>
             <Subline>{`Question: ${question}`}</Subline>
             {<DetailsCard {...detailsCardProps}/>}
-        </>
+        </div>
     )
     
 }
